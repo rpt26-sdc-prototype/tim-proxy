@@ -21,6 +21,7 @@ app.get('/:id', (req, res) => {
 
 //add a get route that goes from react app
   //through proxy then to server
+  //check for errors
 
 app.get('/reviews/:id', async (req, res) => {
   var {data} = await axios.get(`http://localhost:3001/reviews/${req.params.id}`)
