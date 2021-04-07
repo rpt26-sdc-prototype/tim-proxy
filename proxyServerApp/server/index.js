@@ -26,31 +26,51 @@ app.get('/:id', (req, res) => {
 //images routes
 
 app.get('/photoBundle/index_bundle.js', async (req, res) => {
-  var {data} = await axios.get('http://localhost:4012/index_bundle.js')
-  res.send(data)
+  try {
+    var {data} = await axios.get('http://100.24.35.141:4012/index_bundle.js')
+    res.send(data)
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
 app.get('/images/:id', async (req, res) => {
-  let {data} = await axios.get(`http://localhost:4012/images/${req.params.id}`);
-  res.send(data);
+  try {
+    let {data} = await axios.get(`http://100.24.35.141:4012/images/${req.params.id}`);
+    res.send(data);
+  } catch (err) {
+    res.status(500).send(err)
+  }
 });
 
 //product routes
 app.get('/metaBundle/index.js', async (req, res) => {
-  var {data} = await axios.get('http://localhost:4032/index.js')
-  res.send(data)
+  try {
+    var {data} = await axios.get('http://localhost:4032/index.js')
+    res.send(data)
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
 app.get('/api/product/:id/', async (req, res) => {
-  let {data} = await axios.get(`http://localhost:4032/api/product/${req.params.id}`);
-  res.send(data);
+  try {
+    let {data} = await axios.get(`http://localhost:4032/api/product/${req.params.id}`);
+    res.send(data);
+  } catch (err) {
+    res.status(500).send(err)
+  }
 });
 
 
 //more like this routes
 app.get('/moreLikeThisBundle/bundle.js', async (req, res) => {
-  var {data} = await axios.get('http://localhost:4022/bundle.js')
-  res.send(data)
+  try {
+    var {data} = await axios.get('http://localhost:4022/bundle.js')
+    res.send(data)
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
 app.get('/morelikethis/:id', async (req, res) => {
@@ -66,14 +86,22 @@ app.get('/morelikethis/:id', async (req, res) => {
 
 //review routes
 app.get('/reviews/:id', async (req, res) => {
-  var {data} = await axios.get(`http://localhost:4052/reviews/${req.params.id}`)
-  res.send(data)
+  try {
+    var {data} = await axios.get(`http://18.144.23.11:4052/reviews/${req.params.id}`)
+    res.send(data)
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
 //this allows the proxy to get the bundle.js file from the service
 app.get('/reviewBundle/bundle.js', async (req, res) => {
-  var {data} = await axios.get('http://localhost:4052/bundle.js')
-  res.send(data)
+  try {
+    var {data} = await axios.get('http://18.144.23.11:4052/bundle.js')
+    res.send(data)
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
 app.listen(port, () => {
