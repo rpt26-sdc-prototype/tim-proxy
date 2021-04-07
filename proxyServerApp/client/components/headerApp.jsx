@@ -23,10 +23,14 @@ const Row2 = styled.div`
   padding-bottom: 20px;
 `;
 const Install = styled.div`
-  color: #b8b6b4;
+      color: #e5e4dc;
+    font-weight: normal;
   font-size: 11px;
   background-color: #5c7e10;
-  padding: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 
@@ -34,15 +38,21 @@ const Install = styled.div`
 const Login = styled.div`
   color: #b8b6b4;
     font-size: 11px;
-  padding-left: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+
 `;
 const Language = styled.div`
   color: #b8b6b4;
     font-size: 11px;
+    padding-left: 10px;
+    padding-top: 5px;
 `;
+
 const Logo = styled.div`
 
 `;
+
 const Store = styled.div`
   font-size: 14px;
   color: #b8b6b4;
