@@ -11,7 +11,7 @@ module.exports = {
       ref: 'origin/master',
       repo: 'git@github.com:rpt26-sdc-prototype/tim-proxy.git',
       path: '/home/ubuntu/sdc-proxy',
-      'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
+      'post-deploy': 'npm install && pm2 startOrRestart ./server/ecosystem.config.js'
     }
   }
 }
