@@ -98,7 +98,7 @@ app.get('/reviewBundle/bundle.js', async (req, res) => {
 })
 
 app.get('/:id', (req, res) => {
-  res.sendFile(path.resolve('../public/index.html'));
+  res.sendFile(path.resolve('public/index.html'));
 });
 
 app.listen(port, () => {
