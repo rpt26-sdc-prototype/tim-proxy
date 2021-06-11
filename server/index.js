@@ -45,7 +45,7 @@ app.get('/metaBundle/index.js', async (req, res) => {
   } catch (err) {
     res.status(500).send(err)
   }
-}
+});
 
 app.get('/api/product/:id/', async (req, res) => {
   try {
