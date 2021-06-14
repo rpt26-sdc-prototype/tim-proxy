@@ -19,8 +19,7 @@ app.use(express.static('./public'));
 //images routes
 app.get('/photoBundle/index_bundle.js', async (req, res) => {
   try {
-    const { data } = await axios('http://18.118.17.38/index_bundle.js');
-          //console.log(data);
+    const { data } = await axios('http://18.1q18.17.38/index_bundle.js');
     //var {data} = await axios.get('https://steam-fec.s3.amazonaws.com/bundle/index_bundle.js')
     res.send(data)
   } catch (err) {
@@ -79,23 +78,23 @@ app.get('/morelikethis/:id', async (req, res) => {
 });
 
 //review routes
-app.get('/reviews/:id', async (req, res) => {
-  try {
-    var {data} = await axios(`https://www.steammop.app/reviews/${req.params.id}`);
-    res.send(data)
-  } catch (err) {
-    res.status(500).send(err)
-  }
-})
+// app.get('/reviews/:id', async (req, res) => {
+//   try {
+//     var {data} = await axios(`https://www.steammop.app/reviews/${req.params.id}`);
+//     res.send(data)
+//   } catch (err) {
+//     res.status(500).send(err)
+//   }
+// })
 
-app.get('/reviewBundle/bundle.js', async (req, res) => {
-  try {
-    var {data} = await axios('https://steammop.app/bundle.js')
-    res.send(data)
-  } catch (err) {
-    res.status(500).send(err)
-  }
-})
+// app.get('/reviewBundle/bundle.js', async (req, res) => {
+//   try {
+//     var {data} = await axios('https://steammop.app/bundle.js')
+//     res.send(data)
+//   } catch (err) {
+//     res.status(500).send(err)
+//   }
+// })
 
 app.get('/:id', (req, res) => {
   res.sendFile(path.resolve('public/index.html'));
