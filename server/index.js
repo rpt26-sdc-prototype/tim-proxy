@@ -4,7 +4,7 @@ var path = require('path');
 var cors = require('cors')
 const app = express();
 const port = 3000;
-const axios = require('axios').default;
+const axios = require('axios');
 
 app.use(morgan('dev'));
 
@@ -103,3 +103,5 @@ app.get('/:id', (req, res) => {
 app.listen(port, () => {
   console.log(`App listening at port ${port}`);
 });
+
+

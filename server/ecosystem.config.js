@@ -1,5 +1,5 @@
 module.exports = {
-  apps: [{
+  apps: [{:
     name: 'sdc-proxy',
     script: './server/index.js'
   }],
@@ -15,3 +15,4 @@ module.exports = {
     }
   }
 }
+
